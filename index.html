@@ -27,7 +27,6 @@
       padding: 2px 5px;
     }
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include Google Maps JS API -->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZgt2CI_1PZ5D4M1RUDfp1FNHnRC8hEl4&libraries=drawing&sensor=false">
   </script>
@@ -57,30 +56,35 @@
       //creating drawingManager
       var drawingManager = new google.maps.drawing.DrawingManager({
         //initial drawing tool to be enabled
-        drawingMode: google.maps.drawing.OverlayType.POLYGON,
+        drawingMode: null, //google.maps.drawing.OverlayType.POLYGON,
         //enable the drawingControl to be seen in the UI
-        drawingControl: false,
+        drawingControl: true,
         //select which drawing modes to be seen in the drawingControl and position them
-        markerOptions: {
-          draggable: true
+        drawingControlOptions: {
+          //select a position in the UI
+          position: google.maps.ControlPosition.TOP_CENTER,
+          //selected drawing modes to be seen in the control
+          drawingModes: [
+            google.maps.drawing.OverlayType.POLYGON
+          ]
         },
         //specific drawing mode options, this one for polygon
         polygonOptions: {
           strokeColor: 'blue',
-          strokeWeight: 1,
+          strokeWeight: 3,
           fillColor: 'yellow',
+          fillOpacity: 0.2,
           editable: true,
-          fillOpacity: 0.2
+          draggable: true
         }
       });
 
       //enable drawing functionality
       drawingManager.setMap(map);
-      
+
       //add event listener for completion of your polygon
       google.maps.event.addListener(drawingManager, 'polygoncomplete', function (polygon) {
         //get the coordinate array of your polygon
-        drawingManager.setDrawingMode(null);
         var path = polygon.getPath();
         //calculate area
         var area = google.maps.geometry.spherical.computeArea(path);
@@ -101,7 +105,7 @@
         var coordinateText = 'Lat/Lng: ' + e.latLng.lat().toFixed(6) + ' / ' + e.latLng.lng().toFixed(6);
         controlDiv.innerHTML = coordinateText;
       });
-      /*google.maps.event.addListener(drawingManager, 'overlaycomplete', function (e) {
+      google.maps.event.addListener(drawingManager, 'overlaycomplete', function (e) {
         polygon = e.overlay;
       });
       google.maps.event.addDomListener(document, 'keyup', function (e) {
@@ -110,39 +114,6 @@
           drawingManager.setDrawingMode(null);
           polygon.setMap(null);
         }
-      });*/
-      
-      var selectedShape;
-      $('#resetPolygon').click(function() {
-        if (selectedShape) {
-          selectedShape.setMap(null);
-        }
-      });
-      function clearSelection() {
-        if (selectedShape) {
-          selectedShape.setEditable(false);
-          selectedShape = null;
-        }
-      }
-      function setSelection(shape) {
-        clearSelection();
-        selectedShape = shape;
-        shape.setEditable(true);
-      }
-      google.maps.event.addListener(drawingManager, 'overlaycomplete', function(e) {
-        all_overlays.push(e);
-        if (e.type != google.maps.drawing.OverlayType.MARKER) {
-          // Switch back to non-drawing mode after drawing a shape.
-          drawingManager.setDrawingMode(null);
-          // Add an event listener that selects the newly-drawn shape when the user
-          // mouses down on it.
-          var newShape = e.overlay;
-          newShape.type = e.type;
-          google.maps.event.addListener(newShape, 'click', function() {
-            setSelection(newShape);
-          });
-          setSelection(newShape);
-        }
       });
     }
     google.maps.event.addDomListener(window, 'load', initMap);
@@ -150,7 +121,7 @@
 </head>
 
 <body onload="initMap()">
-  <input type="button" id="resetPolygon" value="Reset" style="" />
+  <b>Drawing Options</b><br />
   <div id="mapDiv" />
 </body>
 
