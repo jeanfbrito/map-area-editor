@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <Document>
+    <name>GPS TrackMaker</name>
+    <visibility>1</visibility>
+    <Style id="waypoint">
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </Style>
+    <Style id="route">
+      <Icon>
+        <href>root://icons/bitmap-4.png?x=160&amp;y=0&amp;w=32&amp;h=32</href>
+      </Icon>
+    </Style>
+    <LookAt>
+      <longitude>-51.70637</longitude>
+      <latitude>-29.27065</latitude>
+      <range>3349</range>
+    </LookAt>
+    <Folder>
+      <name>Waypoints</name>
+      <visibility>1</visibility>
+      <Placemark>
+        <name>1 Giovani Foppa</name>
+        <description>Isabel</description>
+        <styleUrl>#waypoint</styleUrl>
+        <Point>
+          <coordinates>-51.7053604125977,-29.2680168151855,.8</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>5 Giovani Foppa</name>
+        <description>Chardonnay espaldeira</description>
+        <styleUrl>#waypoint</styleUrl>
+        <Point>
+          <coordinates>-51.7058944702148,-29.2669448852539,2</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>3 Giovani Foppa</name>
+        <description>Bordô</description>
+        <styleUrl>#waypoint</styleUrl>
+        <Point>
+          <coordinates>-51.7055397033691,-29.2734260559082,.5</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>2 Giovani Foppa</name>
+        <description>Isabel/Concord</description>
+        <styleUrl>#waypoint</styleUrl>
+        <Point>
+          <coordinates>-51.7062377929688,-29.2729454040527,1</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>4 Giovani Foppa</name>
+        <description>Niagara Branca e Rosada</description>
+        <styleUrl>#waypoint</styleUrl>
+        <Point>
+          <coordinates>-51.7074966430664,-29.2742958068848,.8</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Tracklogs</name>
+      <visibility>1</visibility>
+      <Placemark>
+        <name>Trilha 0001</name>
+        <Style>
+          <LineStyle>
+            <color>FF000000</color>
+            <width>2</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>-51.7059097290039,-29.2676010131836,0 -51.7059211730957,-29.2681369781494,0 -51.7053108215332,-29.2683238983154,0 -51.704761505127,-29.268590927124,0 -51.7047805786133,-29.2679347991943,0 -51.7054481506348,-29.2676277160645,0 -51.7059097290039,-29.2676010131836,0 </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Trilha 0002</name>
+        <Style>
+          <LineStyle>
+            <color>FF000000</color>
+            <width>2</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>-51.7069778442383,-29.2666053771973,0 -51.7066688537598,-29.2673816680908,0 -51.7063331604004,-29.2672939300537,0 -51.704761505127,-29.2678470611572,0 -51.7049331665039,-29.2665557861328,0 -51.7059783935547,-29.2664794921875,0 -51.7069778442383,-29.2666053771973,0 </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Trilha 0003</name>
+        <Style>
+          <LineStyle>
+            <color>FF000000</color>
+            <width>2</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>-51.7060394287109,-29.2725410461426,0 -51.7057991027832,-29.2729091644287,0 -51.7057991027832,-29.273078918457,0 -51.7058172478561,-29.2730857656544,0 -51.7062034606934,-29.2732315063477,0 -51.7061347961426,-29.2735710144043,0 -51.7061122152987,-29.2735667653208,0 -51.7057800292969,-29.2735042572021,0 -51.7057809852895,-29.2735149324533,0 -51.7058030919871,-29.2737617905759,0 -51.7058143615723,-29.2738876342773,0 -51.7062644958496,-29.2739315032959,0 -51.7063941955566,-29.2734756469727,0 -51.7066459655762,-29.2726745605469,0 -51.7060394287109,-29.2725410461426,0 </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Trilha 0004</name>
+        <Style>
+          <LineStyle>
+            <color>FF000000</color>
+            <width>2</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>-51.7057991027832,-29.2729091644287,0 -51.7056617736816,-29.2729396820068,0 -51.7048034667969,-29.2737331390381,0 -51.7058030919871,-29.2737617905759,0 -51.7057809852895,-29.2735149324533,0 -51.7061122152987,-29.2735667653208,0 -51.7062034606934,-29.2732315063477,0 -51.7058172478561,-29.2730857656544,0 -51.7057991027832,-29.2729091644287,0 </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>Trilha 0005</name>
+        <Style>
+          <LineStyle>
+            <color>FF000000</color>
+            <width>2</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>-51.7079734802246,-29.2740650177002,0 -51.7072219848633,-29.2739887237549,0 -51.7068786621094,-29.2740268707275,0 -51.7068939208984,-29.2745399475098,0 -51.7077407836914,-29.2748146057129,0 -51.7079467773438,-29.2746543884277,0 -51.7079734802246,-29.2740650177002,0 </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
